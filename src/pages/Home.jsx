@@ -57,7 +57,6 @@ function Home() {
       totalExperience: 6,
       expectedSalary: "$2,500/month",
     },
-   
   ];
   return (
     <div className="">
@@ -163,6 +162,116 @@ function Home() {
           {profiles.map((profile, index) => (
             <Profilecard key={index} profile={profile} />
           ))}
+        </div>
+      </div>
+      {/*SBS news section*/}
+      <div className=" py-24 px-20">
+        <div className=" text-center flex justify-center items-center">
+          <h1 className="text-[38px] font-semibold font-libreaskerville">
+            Supercoder on SBS News
+          </h1>
+        </div>
+        <div className="mt-20 flex gap-16">
+          <div className=" ">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Bie-qAFL8ZA?si=XBXIUd6LvRX8MBDY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <h1 className="text-[24px] font-libreaskerville font-semibold text-blue-500">
+              SBS NEWS
+            </h1>
+            <h3 className="pt-4 font-semibold">
+              SBS News "Why Korean developers? Even big companies have turned
+              their attention"
+            </h3>
+            <p className="pt-4">
+              "In terms of job performance, foreign developers are not lacking
+              either. When I meet startup people, they say that the advantages
+              of Southeast Asian developers are not insignificant, considering
+              the difficulty of finding people and the need to cut costs, among
+              other things." - Journalist Jung Joon-ho.
+            </p>
+            <p className="pt-4">February 20, 2023</p>
+            <Link>
+              <p className="underline pt-4 text-blue-500">See more media</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/*stats section*/}
+
+      <div className="bg-slate-100 px-24 py-20">
+        <div className="flex justify-center text-center">
+          <h1 className="text-[36px] font-libreaskerville font-semibold">
+            Supercoder keeps you to hire the best talent
+          </h1>
+        </div>
+        <div className="m-20 grid grid-cols-3 gap-16">
+          <div className="text-center justify-center">
+            <div className="py-4">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                100+
+              </h1>
+              <p>Countries where developers are joining</p>
+            </div>
+            <div className="pt-8">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                40%
+              </h1>
+              <p>Remote team expansion</p>
+            </div>
+          </div>
+          <div className="text-center justify-center">
+            <div className="py-4 ">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                11000+
+              </h1>
+              <p>Developers vetted</p>
+            </div>
+            <div className="pt-14">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                100%
+              </h1>
+              <p>Client retention rate</p>
+            </div>
+          </div>
+          <div className="text-center justify-center">
+            <div className="py-4">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                2
+              </h1>
+              <p>Weeks average time of hiring</p>
+            </div>
+            <div className="pt-14">
+              <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
+                95%
+              </h1>
+              <p>Satisfied customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/*reveiw section*/}
+      <div className="py-24 px-20">
+        <div className="text-center justify-center items-center w-4/5 ml-20">
+          <h1 className="text-[38px] font-libreaskerville font-semibold">
+            What our customers say
+          </h1>
+          <p className="text-[24px] font-semibold">
+            Supercoder has helped more than 30+ clients from all around the
+            world to hire global software engineers. Here’s what they say about
+            us
+          </p>
         </div>
       </div>
     </div>
