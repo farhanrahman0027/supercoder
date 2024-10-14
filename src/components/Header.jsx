@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className='bg-blue-100 px-20 py-4 flex justify-between items-center fixed w-full shadow-lg'>
+    <div className='bg-blue-100 z-10 px-20 py-4 flex justify-between items-center fixed w-full shadow-lg'>
      <div>
         <h1 className='text-blue-500 font-bold md:text-4xl'>SUPERCODER</h1>
      </div>

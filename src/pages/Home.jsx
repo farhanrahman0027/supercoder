@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import banner from "../assets/images/customer-banner.svg";
 import seminar from "../assets/images/edm-04.svg";
 import banner1 from "../assets/images/customer-baner-img-bg.svg";
 import { Link } from "react-router-dom";
 import Profilecard from "../components/Profilecard";
+import starbg from "../assets/images/starbg.svg";
+import VideoComponent from "../components/videocomponent";
+import RemoteDev from "../components/RemoteDev";
 function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const profiles = [
     {
       name: "Farhan",
@@ -58,6 +62,29 @@ function Home() {
       expectedSalary: "$2,500/month",
     },
   ];
+
+  const images = [
+    "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+    "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
+    "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80",
+    "https://images.unsplash.com/photo-1593642633279-1796119d5482?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80",
+    "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2770&q=80",
+  ];
+
+  const itemsToShow = 3; // Number of images to show at a time
+  // Handle Prev Button
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - itemsToShow : prevIndex - 1
+    );
+  };
+
+  // Handle Next Button
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - itemsToShow ? 0 : prevIndex + 1
+    );
+  };
   return (
     <div className="">
       {/* Header Section */}
@@ -209,13 +236,18 @@ function Home() {
 
       {/*stats section*/}
 
-      <div className="bg-slate-100 px-24 py-20">
+      <div className="px-24 py-20 bg-blue-50">
         <div className="flex justify-center text-center">
           <h1 className="text-[36px] font-libreaskerville font-semibold">
             Supercoder keeps you to hire the best talent
           </h1>
         </div>
-        <div className="m-20 grid grid-cols-3 gap-16">
+        <div
+          className="m-20 grid grid-cols-3 gap-16"
+          style={{
+            backgroundImage: `url(${starbg})`,
+          }}
+        >
           <div className="text-center justify-center">
             <div className="py-4">
               <h1 className="text-[40px] font-libreaskerville font-semibold text-blue-500">
@@ -262,16 +294,45 @@ function Home() {
       </div>
 
       {/*reveiw section*/}
-      <div className="py-24 px-20">
-        <div className="text-center justify-center items-center w-4/5 ml-20">
-          <h1 className="text-[38px] font-libreaskerville font-semibold">
-            What our customers say
+      <div className="bg-white">
+        <div className="py-24 flex justify-center items-center ">
+          <div className="text-center justify-center items-center w-4/5 ml-20">
+            <h1 className="text-[38px] font-libreaskerville font-semibold">
+              What our customers say
+            </h1>
+            <p className="text-[24px] font-semibold">
+              Supercoder has helped more than 30+ clients from all around the
+              world to hire global software engineers. Here’s what they say
+              about us
+            </p>
+          </div>
+        </div>
+        <VideoComponent />
+      </div>
+
+      {/*hire developers*/}
+
+      <div className=" py-24 px-20 bg-blue-50 mt-28">
+        <div className=" flex text-center justify-center px-28 ">
+          <h1 className=" text-[40px] font-libreaskerville font-semibold">
+            How to hire top remote developers through Supercoder?
           </h1>
-          <p className="text-[24px] font-semibold">
-            Supercoder has helped more than 30+ clients from all around the
-            world to hire global software engineers. Here’s what they say about
-            us
-          </p>
+        </div>
+        <div className="w-full mt-12">
+          <RemoteDev />
+        </div>
+        <div className="flex justify-center items-center mt-16">
+          <button className="bg-blue-500 px-20 py-2 text-white font-libreaskerville rounded-full border border-blue-100">
+            Hire Developers
+          </button>
+        </div>
+      </div>
+
+      {/*faq section*/}
+
+      <div className="bg-white px-20 py-24">
+        <div className="flex justify-center items-center">
+          <h1 className="text-4xl font-libreaskerville font-semibold">Frequently Asked Questions</h1>
         </div>
       </div>
     </div>
