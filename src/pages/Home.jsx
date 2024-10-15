@@ -7,6 +7,9 @@ import Profilecard from "../components/Profilecard";
 import starbg from "../assets/images/starbg.svg";
 import VideoComponent from "../components/videocomponent";
 import RemoteDev from "../components/RemoteDev";
+import Faq from "../components/Faq";
+import manage from "../assets/images/manage-bg.svg";
+import Footer from "../components/Footer";
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const profiles = [
@@ -330,10 +333,39 @@ function Home() {
 
       {/*faq section*/}
 
-      <div className="bg-white px-20 py-24">
-        <div className="flex justify-center items-center">
-          <h1 className="text-4xl font-libreaskerville font-semibold">Frequently Asked Questions</h1>
+      <div className="bg-white px-20 py-24 ">
+        <div>
+          <h1 className="text-center font-semibold font-libreaskerville text-3xl mb-10">
+            Most Frequently Asked Question ?
+          </h1>
+          <Faq />
         </div>
+      </div>
+
+      {/*  hire and manage developers*/}
+
+      <div className="  flex mt-16 bg-[#1E2736] w-full">
+        <div className="flex flex-col ml-28 py-20 gap-4 text-white ">
+          <h1 className="text-4xl font-semibold">
+            Hire and manage remote developers
+          </h1>
+          <p className="font-semibold text-lg">
+            Tell us the skills you need and we'll find the best developer for
+            you in days, not weeks.
+          </p>
+          <button className="bg-white py-3 text-black font-semibold rounded-full w-52 mt-4 ">
+            Hire Developers
+          </button>
+        </div>
+        <div className=" flex justify-center items-center ml-12 py-20 ">
+          <img src={manage} alt="" />
+          </div>
+      </div>
+
+      {/*footer section */}
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
