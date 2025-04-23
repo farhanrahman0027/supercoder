@@ -2,14 +2,14 @@ import React from "react";
 import logo from "../assets/images/supercoder-logo.svg";
 const Footer = () => {
   return (
-    <div className="bg-[#242D3C] flex flex-col sm:flex-row justify-between items-center py-6 px-6 sm:px-12">
+    <div className="bg-[#242D3C] mt-12  flex flex-col gap-12 sm:flex-row justify-between items-center py-12 px-6 sm:px-12 ">
       {/* Left Section */}
-      <div className="mb-6 sm:mb-0">
+      <div className=" sm:mb-0">
         <img src={logo} alt="Logo" />
       </div>
 
       {/* Right Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 w-full text-white gap-6 sm:gap-12">
+      <div className="grid grid-cols-1 sm:grid-cols-4 w-full text-white  sm:gap-8">
         <div className="grid grid-rows-5">
           <h2 className="text-lg sm:text-xl font-semibold font-libreaskerville">
             Customers
@@ -35,7 +35,7 @@ const Footer = () => {
           <a href="">Press</a>
         </div>
 
-        <div className="grid grid-rows-5 gap-3">
+        <div className="grid grid-rows-5">
           <h2 className="text-lg sm:text-xl font-semibold font-libreaskerville">
             Contact
           </h2>

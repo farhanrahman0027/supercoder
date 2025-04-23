@@ -89,11 +89,11 @@ function Home() {
     );
   };
   return (
-    <div className=" py-24">
+    <div>
       {/* Header Section */}
-      <div className="bg-blue-100 min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-20">
-        <div className="w-full lg:w-1/2">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[75px] font-libreaskerville leading-tight font-semibold w-full lg:w-3/4">
+      <div className="bg-blue-100 pt-44 min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-20">
+        <div className="w-full lg:w-2/3">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-libreaskerville leading-tight font-semibold w-full lg:w-3/4">
             Hire top-tier remote Developers
           </h2>
           <p className="font-medium mt-4 text-base sm:text-lg md:text-xl w-full lg:w-3/5">
@@ -117,7 +117,7 @@ function Home() {
             </div>
             <p className="mt-4 font-normal text-base sm:text-lg text-center sm:text-left">
               Looking for jobs instead?{" "}
-              <Link to="/" className="text-blue-600 underline ml-2">
+              <Link to="/" className="text-blue-600 underline ml-2 ">
                 Apply for Job
               </Link>
             </p>
@@ -424,12 +424,6 @@ function Home() {
             className="max-w-full sm:max-w-lg lg:max-w-full"
           />
         </div>
-      </div>
-
-      {/*footer section */}
-
-      <div>
-        <Footer />
       </div>
     </div>
   );
