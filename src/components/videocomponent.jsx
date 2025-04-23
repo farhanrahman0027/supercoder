@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdNavigateNext, MdNavigateBefore} from "react-icons/md";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 const feedBack = [
   {
@@ -58,11 +58,11 @@ const VideoComponent = () => {
   };
 
   return (
-    <div className="relative w-full px-20">
+    <div className="relative w-full px-4 md:px-20">
       <div className="flex gap-4 overflow-hidden">
         {feedBack.slice(currentIndex, currentIndex + 3).map((item, index) => (
           <div
-            className="w-1/3"
+            className="w-full sm:w-1/2 md:w-1/3"
             key={index}
             style={{
               backgroundImage: `url(${item.image})`,
@@ -107,17 +107,19 @@ const VideoComponent = () => {
         }`}
         disabled={currentIndex === 0}
       >
-        <MdNavigateBefore/>
+        <MdNavigateBefore />
       </button>
 
       <button
         onClick={handleNext}
         className={`absolute right-0 top-1/2 transform -translate-y-1/2 p-4 text-4xl rounded-full bg-gray-500 text-white ${
-          currentIndex + 3 >= feedBack.length ? "opacity-50 cursor-not-allowed" : ""
+          currentIndex + 3 >= feedBack.length
+            ? "opacity-50 cursor-not-allowed"
+            : ""
         }`}
         disabled={currentIndex + 3 >= feedBack.length}
       >
-        <MdNavigateNext/>
+        <MdNavigateNext />
       </button>
     </div>
   );

@@ -26,11 +26,11 @@ const remotedev = [
 
 function RemoteDev() {
   return (
-    <div className="flex gap-4 w-auto ">
+    <div className="flex flex-wrap gap-4 w-full justify-center">
       {remotedev.map((item, index) => (
         <div
           key={index}
-          className="bg-white gap-4 w-3/12 flex py-4 px-4 rounded-md border border-blue-100"
+          className="bg-white gap-4 w-full sm:w-5/12 md:w-3/12 py-4 px-4 rounded-md border border-blue-100"
         >
           <div className="text-4xl text-blue-500 font-semibold font-libreaskerville">
             <h2>{item.id}</h2>
