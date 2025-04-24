@@ -2,7 +2,7 @@ import React from 'react';
 
 function ApplyJob() {
   return (
-    <div className="pt-24 px-6 md:px-20">
+    <div className="pt-44 sm:pt-24 px-6 md:px-20">
       <h1 className="text-3xl font-bold text-blue-600 mb-6">Apply for Remote Developer Jobs</h1>
       <p className="mb-4 text-gray-700">
         Join the elite network of Supercoder developers and land top-tier remote job opportunities.

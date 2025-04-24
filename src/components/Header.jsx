@@ -5,9 +5,9 @@ function Header() {
   return (
     <div className="bg-blue-100 z-10 px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:justify-between items-center fixed w-full shadow-lg gap-2 sm:gap-0">
       {/* Left Section (Logo) */}
-      <div>
+      <div >
         <h1 className="text-blue-500 font-bold text-lg sm:text-xl md:text-2xl">
-          SUPERCODER
+          <a href="/">SUPERCODER</a>
         </h1>
       </div>
 

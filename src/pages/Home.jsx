@@ -117,7 +117,7 @@ function Home() {
             </div>
             <p className="mt-4 font-normal text-base sm:text-lg text-center sm:text-left">
               Looking for jobs instead?{" "}
-              <Link to="/" className="text-blue-600 underline ml-2 ">
+              <Link to="/apply" className="text-blue-600 underline ml-2 ">
                 Apply for Job
               </Link>
             </p>

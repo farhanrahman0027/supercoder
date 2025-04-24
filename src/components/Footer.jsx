@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/supercoder-logo.svg";
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
           <h2 className="text-lg sm:text-xl font-semibold font-libreaskerville">
             Customers
           </h2>
-          <a href="">Hire Developers</a>
+          <Link to="/hire">Hire Developers</Link>
           <a href="">Book a Call</a>
         </div>
 
@@ -22,7 +23,7 @@ const Footer = () => {
           <h2 className="text-lg sm:text-xl font-semibold font-libreaskerville">
             Developers
           </h2>
-          <a href="">Apply for Jobs</a>
+          <Link to="/apply">Apply for jobs</Link>
           <a href="">Developer login</a>
           <a href="">Remote</a>
           <a href="">Developer Jobs</a>
@@ -39,7 +40,7 @@ const Footer = () => {
           <h2 className="text-lg sm:text-xl font-semibold font-libreaskerville">
             Contact
           </h2>
-          <a href="">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </div>
     </div>
